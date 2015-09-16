@@ -25,6 +25,10 @@
     src: url(../coursework-child/UnmaskedBB.ttf), url(../coursework-child/unmaskedbb-webfont.eot?#iefix);
 }
 
+body {
+    background: #fff;
+}
+
 .cw-container body, html {
     width: 100%;
     margin: 0;
@@ -112,7 +116,7 @@
 .resource-container h2 {
     font-size: 28px;
     margin-top: 1.5%;
-    color: #fff;
+    color: #000;
 }
 
 .cw-container h3 {
@@ -133,7 +137,7 @@
     font-size: 24px;
     margin-top: 2.5%;
     padding: 0 1%;
-    color: #fff;
+    color: #000;
 }
 
 .cw-container p {
@@ -541,20 +545,20 @@ span.cloudWord:hover {
     background-color: #ffc92c; }
 
 .city {
-  background-color: #C4D600; }
+  background-color: #2E8B57; }
   .city:hover {
-    background-color: #eaff0a; }
+    background-color: #3bb16f; }
 
 .state {
-  background-color: #6BCABA; }
+  background-color: #F93535; }
   .state:hover {
-    background-color: #91d7cc; }
+    background-color: #fa6767; }
 
 .national {
-  background-color: #69B3E7; }
+  background-color: #4682B4; }
   .national:hover {
-    background-color: #95c9ee; }
-
+    background-color: #699bc4; }
+    
 .color-key {
   background-color: #fff; }
   .color-key:hover {
@@ -574,7 +578,7 @@ span.cloudWord:hover {
   -webkit-transition: 1s; }
   .legend-item h3 {
     font-size: 44px;
-    margin-top: 0; }
+    margin-top: -10px; }
 
 /* Responsive breakpoints (lifted from Bootstrap!) */
 
@@ -591,7 +595,7 @@ span.cloudWord:hover {
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 
-    .cw-container, .research-container {
+    .cw-container, .research-container, .resource-container {
         width: 750px;
     }
 
@@ -600,6 +604,10 @@ span.cloudWord:hover {
     }
 
     .research-container h1 {
+        font-size: 56px;
+    }
+
+    .resource-container h1 {
         font-size: 56px;
     }
 
@@ -624,7 +632,7 @@ span.cloudWord:hover {
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
 
-    .cw-container, .research-container {
+    .cw-container, .research-container, .resource-container {
         width: 970px;
     }
 
@@ -633,6 +641,10 @@ span.cloudWord:hover {
     }
 
     .research-container h1 {
+        font-size: 64px;
+    }
+
+    .resource-container h1 {
         font-size: 64px;
     }
 
@@ -666,7 +678,7 @@ span.cloudWord:hover {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
-    .cw-container, .research-container {
+    .cw-container, .research-container, .resource-container {
         width: 1170px;
     }
 
@@ -675,7 +687,11 @@ span.cloudWord:hover {
     }
 
     .research-container h1 {
-        font-style: 72px;
+        font-size: 72px;
+    }
+
+    .resource-container h1 {
+        font-size: 72px;
     }
 
     .cw-container h2 {
@@ -683,6 +699,10 @@ span.cloudWord:hover {
     }
 
     .research-container h2 {
+        font-size: 48px;
+    }
+
+    .resource-container h2 {
         font-size: 48px;
     }
 

@@ -16,7 +16,7 @@ function cw_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
-// Register Custom Post Type
+// Register Courses Custom Post Type
 function cw_course_posttype() {
 
 	$labels = array(
@@ -75,7 +75,6 @@ function cw_course_posttype() {
 
 }
 
-// Hook into the 'init' action
 add_action( 'init', 'cw_course_posttype', 0 );
 
 function add_courses_metaboxes() {
@@ -303,21 +302,7 @@ add_action( 'wp_footer', 'cw_customizer_css' );
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Register Custom Post Type
+// Register Research Custom Post Type
 function cw_research_posttype() {
 
 	$labels = array(
@@ -376,7 +361,6 @@ function cw_research_posttype() {
 
 }
 
-// Hook into the 'init' action
 add_action( 'init', 'cw_research_posttype', 0 );
 
 function add_research_metaboxes() {
@@ -515,3 +499,190 @@ function research_save_page_meta($post_id, $post) {
 	}
 }
 add_action( 'save_post', 'research_save_page_meta', 1, 2 );
+
+
+
+// Register Resources Custom Post Type
+function cw_resources_posttype() {
+
+	$labels = array(
+		'name'                => 'Resources',
+		'singular_name'       => 'Resource',
+		'menu_name'           => 'Resources',
+		'name_admin_bar'      => 'Resources',
+		'parent_item_colon'   => 'Parent Item:',
+		'all_items'           => 'All Resources',
+		'add_new_item'        => 'Add New Resource',
+		'add_new'             => 'Add New',
+		'new_item'            => 'New Resource',
+		'edit_item'           => 'Edit Resource',
+		'update_item'         => 'Update Resource',
+		'view_item'           => 'View Resource',
+		'search_items'        => 'Search Resources',
+		'not_found'           => 'Not found',
+		'not_found_in_trash'  => 'Not found in Trash',
+	);
+	$args = array(
+		'label'               => 'cw_resources',
+		'description'         => 'Resources post type',
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'thumbnail', ),
+		'taxonomies'          => array( 'cw_resource_type' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-portfolio',
+		'show_in_admin_bar'   => true,
+		'show_in_nav_menus'   => true,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'page',
+	);
+	register_post_type( 'cw_resources', $args );
+
+	register_taxonomy(
+	    'cw_resource_type',
+	    'cw_resources',
+	    array(
+	        'labels' => array(
+	            'name' => 'Resource Categories',
+	            'add_new_item' => 'Add New Category',
+	            'new_item_name' => 'New Category'
+	        ),
+	        'show_ui' => true,
+	        'show_tagcloud' => false,
+	        'hierarchical' => true
+	    )
+	);
+
+	register_taxonomy(
+	    'cw_resource_level',
+	    'cw_resources',
+	    array(
+	        'labels' => array(
+	            'name' => 'Resource Levels',
+	            'add_new_item' => 'Add New Level',
+	            'new_item_name' => 'New Level'
+	        ),
+	        'show_ui' => true,
+	        'show_tagcloud' => false,
+	        'hierarchical' => true
+	    )
+	);
+
+}
+
+add_action( 'init', 'cw_resources_posttype', 0 );
+
+function add_resource_metaboxes() {
+	add_meta_box('resource_inst', 'Instructions', 'resource_inst', 'cw_resources', 'normal', 'high');
+	add_meta_box('resource_url', 'Website URL', 'resource_url', 'cw_resources', 'normal', 'high');
+	add_meta_box('resource_phone', 'Phone Number', 'resource_phone', 'cw_resources', 'normal', 'high');
+	add_meta_box('resource_desc', 'Description', 'resource_desc', 'cw_resources', 'normal', 'high');
+
+}
+add_action( 'add_meta_boxes', 'add_resource_metaboxes' );
+
+function resource_inst() {
+	echo '<p>Add a resource here to generate a drop-down item for it and populate it with the included data.</p>';
+	echo '<p>The title of the post will be the title in the drop-down item header.</p>';
+	echo '<p>Select the category the resource falls under and it will automatically insert into that category dropdown.</p>';
+}
+
+function resource_url() {
+	global $post;
+	echo '<input type="hidden" name="resourcemeta_noncename" id="resourcehmeta_noncename" value="' . wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+	$url = get_post_meta($post->ID, '_url', true);
+	echo '<input type="text" name="_url" value="' . $url . '" />';
+	echo '<p>Note: The URL must contain the http:// or it will not work correctly.</p>';
+}
+
+function resource_phone() {
+	global $post;
+	echo '<input type="hidden" name="resourcemeta_noncename" id="resourcemeta_noncename" value="' . wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+	$phone = get_post_meta($post->ID, '_phone', true);
+	echo '<input type="text" name="_phone" value="' . $phone . '" />';
+}
+
+function resource_desc() {
+	global $post;
+	echo '<input type="hidden" name="resourcemeta_noncename" id="resourcemeta_noncename" value="' . wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+	$desc = get_post_meta($post->ID, '_desc', true);
+	echo '<textarea cols="50" rows="5" name="_desc" value="' . $desc . '">' . $desc . '</textarea>';
+}
+
+
+function cw_save_resource_meta($post_id, $post) {
+	if ( !wp_verify_nonce( $_POST['resourcemeta_noncename'], plugin_basename(__FILE__) )) {
+		return $post->ID;
+	}
+	if ( !current_user_can( 'edit_post', $post->ID ))
+		return $post->ID;
+
+	$resource_meta['_url'] = $_POST['_url'];
+	$resource_meta['_phone'] = $_POST['_phone'];
+	$resource_meta['_desc'] = $_POST['_desc'];
+
+
+	foreach ($resource_meta as $key => $value) {
+		if( $post->post_type == 'revision' ) return;
+		$value = implode(',', (array)$value);
+		if(get_post_meta($post->ID, $key, FALSE)) {
+			update_post_meta($post->ID, $key, $value);
+		} else {
+			add_post_meta($post->ID, $key, $value);
+		}
+		if(!value) delete_post_meta($post->ID, $key);
+	}
+}
+add_action( 'save_post', 'cw_save_resource_meta', 1, 2 );
+
+function resource_page_meta() {
+	global $post;
+	if ('page-resources.php' == get_post_meta( $post->ID, '_wp_page_template', true) ) {
+		remove_post_type_support('page', 'editor');
+		add_meta_box('resource_page_inst', 'Instructions', 'resource_page_inst', 'page', 'normal', 'high');
+		add_meta_box('resource_info_first', 'First Info Box', 'resource_info_first', 'page', 'normal', 'high');
+	}
+}
+add_action( 'add_meta_boxes', 'resource_page_meta' );
+
+function resource_page_inst() {
+	echo '<p>The text box here does not output anything, but is kept here for note-taking.';
+}
+
+function resource_info_first() {
+	global $post;
+	echo '<input type="hidden" name="resourcepagemeta_noncename" id="resourcepagemeta_noncename" value="' . wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+	$info_first = get_post_meta($post->ID, 'info_first', true);
+	echo '<textarea cols="100" rows="10" name="info_first" value="' . $info_first . '">' . wpautop($info_first) . '</textarea>';
+	echo '<p>First info box content. Line breaks will be converted into &lt;p&gt;&lt;/p&gt; tags.</p>';
+}
+
+function resource_save_page_meta($post_id, $post) {
+	if ( !wp_verify_nonce( $_POST['resourcepagemeta_noncename'], plugin_basename(__FILE__) )) {
+		return $post->ID;
+	}
+	if ( !current_user_can( 'edit_post', $post->ID ))
+		return $post->ID;
+
+	$resourcepage_meta['info_first'] = $_POST['info_first'];
+
+	foreach ($resourcepage_meta as $key => $value) {
+		if( $post->post_type == 'revision' ) return;
+		$value = implode(',', (array)$value);
+		if(get_post_meta($post->ID, $key, FALSE)) {
+			update_post_meta($post->ID, $key, $value);
+		} else {
+			add_post_meta($post->ID, $key, $value);
+		}
+		if(!value) delete_post_meta($post->ID, $key);
+	}
+}
+add_action( 'save_post', 'resource_save_page_meta', 1, 2 );
+
+?>

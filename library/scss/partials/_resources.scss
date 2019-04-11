@@ -1,0 +1,234 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Resources Plugin
+
+******************************************************************/
+
+.resource-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 150px;
+    position: relative;
+    background-color: #fff;
+    //background-image: url(http://catacombs.garethbk.com/wp-content/uploads/2015/08/bg-tile-line.png);
+    a, a:hover, a:active, a:visited {
+        text-decoration: none;
+        transition: 1.0s;
+        -webkit-transition: 1.0s;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        padding:  0;
+        font-family: $cubano;
+        font-weight: 100;
+    }
+    h1 {
+        font-size: 4em;
+        color: #000;
+    }
+    h2 {
+        margin-top: 1.5%;
+        color: #000;
+    }
+    h3 {
+        font-size: 24px;
+        margin-top: 2.5%;
+        padding: 0 1%;
+        color: #000;
+    }
+    p {
+        font-family: $unmaskedbb;
+    }
+}
+
+.resource-area {
+  width: 100%;
+  margin-top: 2.5%;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.resource-group {
+  text-align: center;
+  margin-bottom: 2.5%; 
+  h2 {
+    margin: 0;
+    padding: 1.5%;
+  }
+}
+
+.new-resource {
+  text-align: left; }
+
+.resource-name {
+  position: relative;
+  background-color: lightblue;
+  color: #000;
+  transition: box-shadow 0.25s, background-color 1s;
+  -webkit-transition: box-shadow 0.25s, background-color 1s;
+  cursor: pointer;
+  z-index: 99; 
+    h3 {
+        display: inline-block;
+        margin: 0;
+        padding: 1.5%;
+        max-width: 90%; 
+    }
+    @media (max-width: 480px) {
+        .resource-name {
+            h3 {
+                font-size: 10px;
+            }
+        }
+    }
+    @media (min-width: 481px) and (max-width: 768px) {
+        .resource-name {
+            h3 {
+                font-size: 14px;
+            }
+        }
+    }
+    &:hover {
+        box-shadow: 0px 0px 5px #616161;
+        z-index: 1000;
+    }
+}
+
+.arrow {
+  float: right;
+  font-size: 24px;
+  padding: 1.5%;
+  transition: 1s;
+  -webkit-transition: 1s;
+  cursor: pointer; 
+  @media (max-width: 480px) {
+    font-size: 10px;
+    padding: 0;
+    margin: 2% 2% 0 0;
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.rotate {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg); }
+
+.resource-content {
+  width: 100%;
+  position: relative;
+  background-color: #ededed;
+  height: auto;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: 1s;
+  -webkit-transition: 1s;
+  z-index: 98;
+  font-weight: 800; 
+    p {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        padding-bottom: 1.5%;
+        font-size: 20px; 
+    }
+    a {
+        color: steelblue;
+        &:hover {
+            color: #8db3d3;
+        }
+    }
+    @media (max-width: 768px) {
+        p, a {
+            font-size: 12px;
+        }
+    }
+}
+
+.visible-slide {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-height: 500px;
+  transition: 1s;
+  -webkit-transition: 1s; }
+
+.vcu {
+  background-color: #f8b800; 
+  &:hover {
+    background-color: #ffc92c;
+  }
+}
+
+.city {
+  background-color: #2E8B57; 
+  &:hover {
+    background-color: #3bb16f;
+  }
+}
+
+.state {
+  background-color: #F93535; 
+  &:hover {
+    background-color: #fa6767;
+  }
+}
+
+.national {
+  background-color: #4682B4; 
+  &:hover {
+    background-color: #699bc4;
+  }
+}
+    
+.color-key {
+  background-color: #fff; 
+  &:hover {
+    background-color: #e6e6e6
+  }
+}
+
+.resource-legend {
+  height: 250px;
+  margin-top: 5%;
+  margin-bottom: 5%; }
+
+.legend-item {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  display: inline-block;
+  transition: 1s;
+  -webkit-transition: 1s; 
+  h3 {
+    font-size: 44px;
+    margin-top: -10px;
+  }
+}
+
+
+@media (max-width: $small) {
+	
+}
+
+// Portrait Tablet
+@media (min-width: $small) and (max-width: $medium) {
+	
+
+}
+
+// Landscape Tablet
+@media (min-width: $medium) and (max-width: $large) {
+   
+}
+
+// Real big screens
+@media (min-width: $extralarge) {
+  
+}

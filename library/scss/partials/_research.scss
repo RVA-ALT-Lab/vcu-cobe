@@ -1,0 +1,279 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Research Plugin
+
+******************************************************************/
+
+.research-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 150px;
+    position: relative;
+    background-color: #fff;
+    background-image: url(http://catacombs.garethbk.com/wp-content/uploads/2015/08/bg-tile-line.png);
+    a, a:hover, a:active, a:visited {
+        text-decoration: none;
+        transition: 1.0s;
+        -webkit-transition: 1.0s;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        padding:  0;
+        font-family: $cubano;
+        font-weight: 100;
+    }
+    h1 {
+        font-size: 4em;
+        color: #000;
+    }
+    h2 {
+        margin-top: 1.5%;
+        color: #fff;
+    }
+    h3 {
+        font-size: 24px;
+        margin-top: 2.5%;
+        padding: 0 1%;
+        color: #fff;
+    }
+    p {
+        font-family: $unmaskedbb;
+    }
+}
+
+.research-info-box {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5%;
+    padding: 1%;
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    border: 2px solid black;
+    p {
+        padding: 1%;
+        color: #000;
+    }
+}
+
+#canvas-container {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5%;
+    padding-bottom: -5%;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#cloud-wrapper {
+    height: auto;
+    min-height: 500px;
+    position: relative;
+    top: 35px;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    span {
+        font-family: $cubano;
+        position: absolute;
+        cursor: pointer;
+        display: none;
+        transition: 1s;
+        -webkit-transition: 1s;
+    }
+}
+
+#cloud-wrapper-five {
+    height: auto;
+    min-height: 500px;
+    max-width: 1100px;
+    position: relative;
+    top: 35px;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    span {
+        font-family: $cubano;
+        position: absolute;
+        cursor: pointer;
+        display: none;
+        transition: 1s;
+        -webkit-transition: 1s;
+    }
+}
+
+#cloud-wrapper-four {
+    height: auto;
+    min-height: 425px;
+    max-width: 900px;
+    position: relative;
+    top: 35px;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    span {
+        font-family: $cubano;
+        position: absolute;
+        cursor: pointer;
+        display: none;
+        transition: 1s;
+        -webkit-transition: 1s;
+    }
+}
+
+#cloud-wrapper-three {
+    height: auto;
+    min-height: 300px;
+    max-width: 700px;
+    position: relative;
+    top: 35px;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    span {
+        font-family: $cubano;
+        position: absolute;
+        cursor: pointer;
+        display: none;
+        transition: 1s;
+        -webkit-transition: 1s;
+    }
+}
+
+#cloud-wrapper-one, #cloud-wrapper-two {
+    height: auto;
+    min-height: 250px;
+    max-width: 480px;
+    position: relative;
+    top: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    span {
+        font-family: $cubano;
+        position: absolute;
+        cursor: pointer;
+        display: none;
+        transition: 1s;
+        -webkit-transition: 1s;
+    }
+}
+
+span.cloudWord:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    z-index: 99;
+}
+
+#course-select {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3.5%;
+    border: 0px solid black;
+    text-align: center;
+    h2 {
+        font-size: 48px;
+        transition: 1s;
+        -webkit-transition: 1s;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.transparent {
+    opacity: 0;
+}
+
+.opaque {
+    opacity: 1;
+}
+
+$cOne: 480px;
+$cTwo: 700px;
+$cThree: 820px;
+$cFour: 1040px;
+$cFive: 1240px;
+
+@media (max-width: $cOne) {
+	.research-container {
+		h1 {
+			font-size: 2.5em;
+		}
+	}
+    #cloud-wrapper-one {
+        display: block;
+    }
+    #cloud-wrapper-two {
+        display: none;
+    }
+}
+
+// Portrait Tablet
+@media (min-width: $cOne) and (max-width: $cTwo) {
+	.research-container {
+		h1 {
+			font-size: 2.5em;
+		}
+	}
+    #cloud-wrapper-one {
+        display: none;
+    }
+
+    #cloud-wrapper-two {
+        display: block;
+    }
+
+}
+
+// Landscape Tablet
+@media (min-width: $cTwo) and (max-width: $cThree) {
+    #cloud-wrapper-one, #cloud-wrapper-two {
+        display: none;
+    }
+
+    #cloud-wrapper-three {
+        display: block;
+    }
+}
+
+// Real big screens
+@media (min-width: $cThree) and (max-width: $cFour) {
+    #cloud-wrapper-one, #cloud-wrapper-two, #cloud-wrapper-three {
+        display: none;
+    }
+
+    #cloud-wrapper-four {
+        display: block;
+    }
+}
+
+@media (min-width: $cFour) and (max-width: $cFive) {
+    #cloud-wrapper-one, #cloud-wrapper-two, #cloud-wrapper-three, #cloud-wrapper-four {
+        display: none;
+    }
+
+    #cloud-wrapper-five {
+        display: block;
+    }
+}
+
+@media (min-width: $cFive) {
+    #cloud-wrapper-one, #cloud-wrapper-two, #cloud-wrapper-three, #cloud-wrapper-four, #cloud-wrapper-five {
+        display: none;
+    }
+
+    #cloud-wrapper {
+        display: block;
+    }
+}

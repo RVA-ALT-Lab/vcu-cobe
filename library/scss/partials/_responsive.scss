@@ -1,0 +1,182 @@
+// Responsiveness
+// Feel free to use your own responsive widths and styles for the grid
+// These are mostly for example use only.
+// -------------------------------------------------------------------
+
+// Mobile
+@media (max-width: $small) {
+    #container {
+        padding-bottom: 0 !important;
+    }
+
+    #inner-header {
+        display: none;
+    }
+
+    #top-story, #social-connect {
+        width: 100%;
+        margin-left: 0;
+    }
+
+   #instafeed {
+    img {
+        position: relative;
+    }
+   }
+
+   #home-news {
+    .bit-3 {
+        height: 75px;
+        img {
+            display: none;
+        }
+        &:nth-child(4) {
+            border-top: 1px solid $gray;
+            border-bottom: 1px solid $gray;
+            border-left: 0;
+            border-right: 0;
+        }
+    }
+   }
+   #front-about {
+    #about-photos {
+        img {
+            min-height: 0;
+        }
+        figure {
+            padding: 0;
+        }
+    }
+    .slides-bar {
+        display: none;
+    }
+    .bss-next {
+        padding: 10px 10px 15px 10px;
+    }
+   }
+   #inner-footer {
+    text-align: center;
+    #cobe-cr {
+        position: relative;
+    }
+   }
+}
+
+// Portrait Tablet
+@media (min-width: $small) and (max-width: $medium) {
+
+    #inner-header {
+        display: none;
+    }
+
+    #top-story, #social-connect {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #home-news-window {
+        display: none;
+    }
+
+    #instafeed {
+    img {
+        position: relative;
+    }
+   }
+   #gcf-design {
+    height: 340px;
+    margin-bottom: 5px;
+   }
+   #home-news-resp {
+    display: block;
+   }
+   #front-about {
+    #about-photos {
+        img {
+            min-height: 0;
+        }
+        figure {
+            padding: 0;
+        }
+    }
+    .slides-bar {
+        display: none;
+    }
+    .bss-next {
+        padding: 10px 10px 15px 10px;
+    }
+   }
+   #inner-footer {
+    text-align: center;
+    #cobe-cr {
+        position: relative;
+    }
+   }
+   #pc-contact {
+    .bit-75 {
+        width: 100%;
+    }
+   }
+}
+
+// Landscape Tablet
+@media (min-width: $medium) and (max-width: $large) {
+    #inner-header {
+        display: none;
+    }
+    
+    #instafeed {
+        img {
+            position: relative;
+        }
+   }
+    #top-story, #social-connect {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #gcf-design {
+    margin-bottom: 5px;
+   }
+
+   .pc-episode-box-front {
+    min-height: 450px;
+   }
+
+     #home-news-window {
+        display: none;
+    }
+
+    #home-news-resp {
+        display: block;
+        .bit-3 {
+            &:nth-child(4) {
+                border-top: 0;
+                border-bottom: 0;
+                border-left: 1px solid $gray;
+                border-right: 1px solid $gray;
+            }
+        }
+    }
+
+    #front-about {
+        #about-photos {
+            img {
+                min-height: 0;
+            }
+            figure {
+                padding: 0;
+            }
+        }
+    }
+    .bss-next {
+        padding: 10px 10px 15px 10px;
+    }
+}
+
+@media (min-width: $large) {
+    // Set frame to 1200px container for large sizes
+    .frame {
+        max-width: 1200px;
+    }
+}

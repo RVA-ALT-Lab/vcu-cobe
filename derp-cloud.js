@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 //build html for cloud - sometimes the dumbest way is the only one that works...
-$cloudHtml = '<span class="cloudWord" style="font-size: 48px; left: 45%; top: 1%;">stress</span>';
+$cloudHtml = '<span class="cloudWord" style="font-size: 48px; left: 43%; top: 1%;">stress</span>';
 $cloudHtml += '<span class="cloudWord" style="font-size: 36px; left: 40%; top: 10%;">fitness</span>';
 $cloudHtml += '<span class="cloudWord" style="font-size: 18px; left: 33%; top: 18%;">trauma</span>';
 $cloudHtml += '<span class="cloudWord" style="font-size: 20px; left: 35%; top: 13%;">pets</span>';
@@ -19,7 +19,7 @@ $cloudHtml += '<span class="cloudWord" style="font-size: 20px; left: 39%; top: 4
 $cloudHtml += '<span class="cloudWord" style="font-size: 19px; left: 53%; top: 35%;">internalizing disorders</span>';
 $cloudHtml += '<span class="cloudWord" style="font-size: 30px; left: 73%; top: 35%;">bias</span>';
 $cloudHtml += '<span class="cloudWord" style="font-size: 24px; left: 17%; top: 44%;">social inequality</span>';
-$cloudHtml += '<span id="init" class="cloudWord" dtat style="font-size: 48px; left: 35%; top: 44%;">addiction</span>';
+$cloudHtml += '<span id="init" class="cloudWord" style="font-size: 48px; left: 35%; top: 44%;">addiction</span>';
 $cloudHtml += '<span class="cloudWord" style="font-size: 21px; left: 61%; top: 40%;">bereavement</span>';
 $cloudHtml += '<span class="cloudWord" style="font-size: 34px; left: 55%; top: 44%;">sexual health</span>';
 $cloudHtml += '<span class="cloudWord" style="font-size: 18px; left: 73%; top: 41%;">asthma</span>';

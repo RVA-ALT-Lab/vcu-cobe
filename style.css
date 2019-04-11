@@ -1,742 +1,108 @@
+/******************************************************************
+Theme Name: COBE
+Theme URI: http://cobe.vcu.edu
+Description: VCU College of Behavioral and Emotional Health.  General design ideas attempt to follow Google's Material Design Language, integrated with VCU brand colors and COBE-specific colos.  Based off of Bones (http://www.themble.com/bones).
+Author: Gareth Bk
+Author URI: http://www.garethbk.com
+Version: 1.0
+Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready, microformats, rtl-language-support
+
+License: WTFPL
+License URI: http://sam.zoy.org/wtfpl/
+Are You Serious? Yes.
+
+
+MAKE SURE TO READ BELOW BEFORE GETTING STARTED FOR THE FIRST TIME!
+------------------------------------------------------------------
+
+You may be thinking…
+
+WHOA, WHOA, WHOA…WHAT HAPPENED HERE?
+
+But before you freak out, let me take a few minutes to explain.
+
+Bones now uses Sass by default. If you prefer using regular CSS,
+then feel free to modify this theme how you like and keep a copy
+as your own personal starting point.
+
+DON'T DISMISS IT JUST YET THOUGH, USING Sass ISN'T AS COMPLICATED AS YOU THINK.
+
+It does take a few minutes to wrap your head around, but it will all
+be worth it. Need a quick intro? Here are a few quick reads:
+
+http://simplebits.com/notebook/2013/11/13/sass-book/ (BUY THIS)
+http://cognition.happycog.com/article/preprocess-this
+http://viget.com/inspire/sass-a-designers-perspective
+http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
+http://css-tricks.com/sass-style-guide/
+http://net.tutsplus.com/tutorials/html-css-techniques/developing-with-sass-and-chrome-devtools/
+
+I would HIGHLY RECOMMEND, if you are going to be working with Sass, that you work locally.
+The browsers don't understand Sass and compiling it on the server takes a bit
+of a setup.
+
+That being said, here are a few MUST HAVE TOOLS for working with a
+pre-processor: (You really only need one of them)
+
+CodeKit: (Highly Recommended)
+http://incident57.com/codekit/
+
+Compass App: (Windows / Mac Users)
+http://compass.handlino.com/
+
+These applications compile Sass into valid CSS. This
+way you can keep your production files easy to read and your
+CSS minified and speedy. Simply set the output to the
+library/css folder and you are all set. It's a thing of beauty.
+
+You can also setup auto compiling with Grunt or using Terminal on
+OSX. It's a bit complicated to setup so if you aren't familiar
+with it, just get one of the automated applications.
+
+---------------------------------------------------------------
+
+Remember, once you download Bones it's up to you how to use it,
+so go nuts. Set things up and develop in a way that's easiest for
+you. If using Sass is still a bit confusing for you, then remove it
+and customize this template as you see fit.
+
+If you're a bit uneasy about using Sass or just want a familiar setup,
+take a few minutes and think about how much better a developer you
+can become by just TRYING out new technologies. It may be tough at
+first but it WILL make you a better developer. TRUST ME ON THIS. Give
+it a week, maybe two, and you will never go back.
+
+If you STILL can't get on board and want to jump ship, that's cool.
+Bones is not for everyone and that's ok, I mean I'm not hurt by it,
+whatever, I never liked you anyway. Here are some other alternatives
+if you're looking for a blank starter theme. I'll just be here waiting
+by the window, in case you ever decide to come back.
+
+http://roots.io/starter-theme (way more complex but has a ton of cool features)
+http://html5reset.org (super clean and great markup)
+https://github.com/viewportindustries/starkers (not sure if it's still active, but still good)
+
+That's it. It's time to jump in and get your hands dirty.
+Seriously, why are you still reading this? Get to work!
+If you have any issues or problems, you can create an issue on github
+or find me on Twitter: @eddiemachado (SHAMELESS PLUG!).
+
+Happy Developing!
+
+(When you're done, you may want to remove all this nonsense before
+passing it along to your client.)
+
+******************************************************************/
 
 /*
- Theme Name:   Coursework Child
- Theme URI:    http://cobe.vcu.edu/
- Description:  COBE Child Theme
- Author:       Gareth Bk
- Author URI:   http://garethbk.com
- Template:     whitelight
- Version:      1.6.5
- License:      GNU General Public License v2 or later
- License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:         full-width, infographic
- Text Domain:  coursework-child
+WordPress Probz
+So Theme Check (http://wordpress.org/plugins/theme-check/)
+is constantly telling me that it needs these classes in the CSS even
+though they are in the REAL stylesheet in library/css/style.css.
+So we're gonna drop these here to keep it happy.
+Great work, Theme Check (eye roll)
 */
 
-/*  Generic styles */
-
-@font-face {
-    font-family: 'Cubano';
-    src: url(../coursework-child/Cubano-Regular.otf), url(../coursework-child/cubano-regular-webfont.eot?#iefix);
-}
-
-@font-face {
-    font-family: 'UnmaskedBB';
-    src: url(../coursework-child/UnmaskedBB.ttf), url(../coursework-child/unmaskedbb-webfont.eot?#iefix);
-}
-
-body {
-    background: #fff;
-}
-
-.cw-container body, html {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.research-container body, html {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.resource-container body, html {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.cw-container a, a:hover, a:active, a:visited {
-    text-decoration: none;
-    transition: 1.0s;
-    -webkit-transition: 1.0s;
-}
-
-.research-container a, a:hover, a:active, a:visited {
-    text-decoration: none;
-    transition: 1.0s;
-    -webkit-transition: 1.0s;
-}
-
-.resource-container a, a:hover, a:active, a:visited {
-    text-decoration: none;
-    transition: 1.0s;
-    -webkit-transition: 1.0s;
-}
-
-.cw-container h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding:  0;
-    font-family: 'Cubano', 'PT Sans', sans-serif;
-    font-weight: 100;
-}
-
-.research-container h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding:  0;
-    font-family: 'Cubano', 'PT Sans', sans-serif;
-    font-weight: 100;
-}
-
-.resource-container h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding:  0;
-    font-family: 'Cubano', 'PT Sans', sans-serif;
-    font-weight: 100;
-}
-
-.cw-container h1 {
-    font-size: 32px;
-    color: #000;
-}
-
-.research-container h1 {
-    font-size: 32px;
-    color: #000;
-}
-
-.resource-container h1 {
-    font-size: 32px;
-    color: #000;
-}
-
-.cw-container h2 {
-    font-size: 28px;
-    margin-top: 1.5%;
-    color: #fff;
-}
-
-.research-container h2 {
-    font-size: 28px;
-    margin-top: 1.5%;
-    color: #fff;
-}
-
-.resource-container h2 {
-    font-size: 28px;
-    margin-top: 1.5%;
-    color: #000;
-}
-
-.cw-container h3 {
-    font-size: 24px;
-    margin-top: 2.5%;
-    padding: 0 1%;
-    color: #fff;
-}
-
-.research-container h3 {
-    font-size: 24px;
-    margin-top: 2.5%;
-    padding: 0 1%;
-    color: #fff;
-}
-
-.resource-container h3 {
-    font-size: 24px;
-    margin-top: 2.5%;
-    padding: 0 1%;
-    color: #000;
-}
-
-.cw-container p {
-    font-family: 'UnmaskedBB', 'PT Sans', sans-serif;
-}
-
-.research-container p {
-    font-family: 'UnmaskedBB', 'PT Sans', sans-serif;
-}
-
-.resource-container p {
-    font-family: 'UnmaskedBB', 'PT Sans', sans-serif;
-}
-
-.cw-container {
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 150px;
-    position: relative;
-    background-color: #fcee21;
-    background-image: url(http://catacombs.garethbk.com/wp-content/uploads/2015/08/bg-tile-line.png);
-}
-
-.research-container {
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 150px;
-    position: relative;
-    background-color: #fff;
-    background-image: url(http://catacombs.garethbk.com/wp-content/uploads/2015/08/bg-tile-line.png);
-}
-
-.resource-container {
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 150px;
-    position: relative;
-    background-color: #fff;
-}
-
-.col-3 {
-    width: 100%;
-    display: inline-block;
-    float: left;
-}
-
-.head-area {
-    text-align: center;
-    padding: 5% 1%;
-}
-
-.head-area img {
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2.5%;
-}
-
-.info-box {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
-    background-color: #fcee21;
-    font-weight: 700;
-    font-size: 20px;
-    border: 2px solid black;
-}
-
-.research-info-box {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
-    background-color: #fff;
-    font-weight: 700;
-    font-size: 20px;
-    border: 2px solid black;
-}
-
-.info-box p {
-    padding: 1%;
-    color: #000;
-}
-
-.research-info-box p {
-    padding: 1%;
-}
-
-.course-options {
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2.5%;
-    padding: 1%;
-}
-
-.course-options p {
-    font-size: 24px;
-    display: inline;
-}
-
-.course-area {
-    width: 90%;
-    height: auto;
-    min-height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-    padding: 5%;
-    text-align: center;
-    color: white;
-}
-
-.course-area p {
-    font-size: 20px;
-    padding: 0% 5%;
-    margin-top: 2.5%;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-}
-
-.course-area h2 {
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-}
-
-.course-box {
-    width: 100%;
-    height: auto;
-    min-height: 250px;
-    margin-bottom: 2.5%;
-    padding: 2.5%;
-    box-sizing: border-box;
-    background-color: #000;
-    border: 2px solid transparent;
-    display: none;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-}
-
-.course-box:hover {
-    background-color: #2B2B2B;
-    border: 2px solid white;
-}
-
-.visible {
-    display: block;
-}
-
-.invisible {
-    display: none;
-}
-
-.course-cat {
-    width: 100%;
-    height: 75px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2.5%;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    border: 2px outset #333;
-    cursor: pointer;
-    display: inline-block;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-}
-
-.course-cat p {
-    font-family: 'Cubano';
-    font-weight: 100;
-}
-
-.course-cat:hover {
-    background-color: white;
-    color: black;
-}
-
-.course-cat:active {
-    position: relative;
-    top: 1px;
-}
-
-.course-cat:focus {
-    outline: 0;
-}
-
-#canvas-container {
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2.5%;
-    padding-bottom: -5%;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-#cloud-wrapper {
-    height: auto;
-    min-height: 500px;
-    position: relative;
-    top: 35px;
-    display: none;
-}
-
-#cloud-wrapper span {
-    font-family: 'Cubano';
-    position: absolute;
-    cursor: pointer;
-    display: none;
-    transition: 1s;
-    -webkit-transition: 1s;
-}
-
-#cloud-wrapper-med {
-    height: auto;
-    min-height: 500px;
-    position: relative;
-    top: 35px;
-    display: none;
-}
-
-#cloud-wrapper-med span {
-    font-family: 'Cubano';
-    position: absolute;
-    cursor: pointer;
-    display: none;
-    transition: 1s;
-    -webkit-transition: 1s;
-}
-
-#cloud-wrapper-small {
-    height: auto;
-    min-height: 500px;
-    position: relative;
-    top: 35px;
-    display: none;
-}
-
-#cloud-wrapper-small span {
-    font-family: 'Cubano';
-    position: absolute;
-    cursor: pointer;
-    display: none;
-    transition: 1s;
-    -webkit-transition: 1s;
-}
-
-#cloud-wrapper-xs {
-    height: auto;
-    min-height: 250px;
-    position: relative;
-    top: 35px;
-    display: block;
-}
-
-#cloud-wrapper-xs span {
-    font-family: 'Cubano';
-    position: absolute;
-    cursor: pointer;
-    display: none;
-    transition: 1s;
-    -webkit-transition: 1s;
-}
-
-span.cloudWord:hover {
-    transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    z-index: 99;
-}
-
-#course-select {
-    width: 100%;
-    height: auto;
-    min-height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3.5%;
-    border: 0px solid black;
-    text-align: center;
-}
-
-#course-select h2 {
-    font-size: 48px;
-    transition: 1s;
-    -webkit-transition: 1s;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
-
-.transparent {
-    opacity: 0;
-}
-
-.opaque {
-    opacity: 1;
-}
-
-/* Resource page styles */
-
-.resource-area {
-  width: 80%;
-  margin-top: 2.5%;
-  margin-left: auto;
-  margin-right: auto; 
-}
-
-.resource-group {
-  text-align: center;
-  margin-bottom: 2.5%; }
-  .resource-group h2 {
-    margin: 0;
-    padding: 1.5%; }
-
-.new-resource {
-  text-align: left; }
-
-.resource-name {
-  position: relative;
-  background-color: lightblue;
-  color: #000;
-  transition: box-shadow 0.25s, background-color 1s;
-  -webkit-transition: box-shadow 0.25s, background-color 1s;
-  cursor: pointer;
-  z-index: 99; }
-  .resource-name h3 {
-    display: inline-block;
-    margin: 0;
-    padding: 1.5%; }
-    @media (max-width: 480px) {
-      .resource-name h3 {
-        font-size: 10px; } }
-    @media (min-width: 481px) and (max-width: 768px) {
-      .resource-name h3 {
-        font-size: 14px; } }
-  .resource-name:hover {
-    box-shadow: 0px 0px 5px #616161;
-    z-index: 1000; }
-
-.arrow {
-  float: right;
-  font-size: 24px;
-  padding: 1.5%;
-  transition: 1s;
-  -webkit-transition: 1s;
-  cursor: pointer; }
-  @media (max-width: 480px) {
-    .arrow {
-      font-size: 10px;
-      padding: 0;
-      margin: 2% 2% 0 0; } }
-  @media (min-width: 481px) and (max-width: 768px) {
-    .arrow {
-      font-size: 14px; } }
-
-.rotate {
-  transform: rotate(180deg);
-  -webkit-transform: rotate(180deg); }
-
-.resource-content {
-  position: relative;
-  background-color: #ededed;
-  height: auto;
-  max-height: 0;
-  overflow-y: hidden;
-  transition: 1s;
-  -webkit-transition: 1s;
-  z-index: 98;
-  font-weight: 800; }
-  .resource-content p {
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    padding-bottom: 1.5%;
-    font-size: 20px; }
-  .resource-content a {
-    color: steelblue; }
-    .resource-content a:hover {
-      color: #8db3d3; }
-  @media (max-width: 768px) {
-    .resource-content p, .resource-content a {
-      font-size: 12px; } }
-
-.visible-slide {
-  display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  max-height: 500px;
-  transition: 1s;
-  -webkit-transition: 1s; }
-
-.vcu {
-  background-color: #f8b800; }
-  .vcu:hover {
-    background-color: #ffc92c; }
-
-.city {
-  background-color: #2E8B57; }
-  .city:hover {
-    background-color: #3bb16f; }
-
-.state {
-  background-color: #F93535; }
-  .state:hover {
-    background-color: #fa6767; }
-
-.national {
-  background-color: #4682B4; }
-  .national:hover {
-    background-color: #699bc4; }
-    
-.color-key {
-  background-color: #fff; }
-  .color-key:hover {
-    background-color: #e6e6e6; }
-
-.resource-legend {
-  height: 250px;
-  margin-top: 5%;
-  margin-bottom: 5%; }
-
-.legend-item {
-  width: 100%;
-  height: 20%;
-  text-align: center;
-  display: inline-block;
-  transition: 1s;
-  -webkit-transition: 1s; }
-  .legend-item h3 {
-    font-size: 44px;
-    margin-top: -10px; }
-
-/* Responsive breakpoints (lifted from Bootstrap!) */
-
-/* Custom, iPhone Retina */ 
-@media only screen and (min-width : 320px) {
-
-}
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (min-width : 480px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-
-    .cw-container, .research-container, .resource-container {
-        width: 750px;
-    }
-
-    .cw-container h1 {
-        font-size: 56px;
-    }
-
-    .research-container h1 {
-        font-size: 56px;
-    }
-
-    .resource-container h1 {
-        font-size: 56px;
-    }
-
-    .col-3 {
-        width: 50%;
-    }
-
-    .course-cat {
-        width: 90%;
-    }
-
-    #cloud-wrapper-xs {
-        display: none;
-    }
-
-    #cloud-wrapper-small {
-        display: block;
-    }
-
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-
-    .cw-container, .research-container, .resource-container {
-        width: 970px;
-    }
-
-    .cw-container h1 {
-        font-size: 64px;
-    }
-
-    .research-container h1 {
-        font-size: 64px;
-    }
-
-    .resource-container h1 {
-        font-size: 64px;
-    }
-
-    .col-3 {
-        width: 33%;
-    }
-
-    .course-cat {
-        width: 80%;
-        height: 95px;
-    }
-
-    #course-select h2 {
-        font-size: 56px;
-    }
-
-    #cloud-wrapper-xs {
-        display: none;
-    }
-
-    #cloud-wrapper-small {
-        display: none;
-    }
-
-    #cloud-wrapper-med {
-        display: block;
-    }
-
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
-    .cw-container, .research-container, .resource-container {
-        width: 1170px;
-    }
-
-    .cw-container h1 {
-        font-size: 72px;
-    }
-
-    .research-container h1 {
-        font-size: 72px;
-    }
-
-    .resource-container h1 {
-        font-size: 72px;
-    }
-
-    .cw-container h2 {
-        font-size: 48px;
-    }
-
-    .research-container h2 {
-        font-size: 48px;
-    }
-
-    .resource-container h2 {
-        font-size: 48px;
-    }
-
-    .col-3 {
-        width: 33%;
-    }
-
-    .course-cat {
-        height: 75px;
-    }
-
-    #cloud-wrapper-xs {
-        display: none;
-    }
-
-    #cloud-wrapper-small {
-        display: none;
-    }
-
-    #cloud-wrapper-med {
-        display: none;
-    }
-
-    #cloud-wrapper {
-        display: block;
-    }
-
-}
-
-
-
-
-@media only screen and (min-width: 768px){
-    .home-blog #main {
-        width: 100%;
-    }
-}
+.sticky {}          /* DO NOT EDIT THIS */
+.gallery-caption {} /* THESE ARE USELESS */
+.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */

@@ -31,7 +31,7 @@
 									<?php echo '<img src="' . wp_get_attachment_url(get_post_thumbnail_id($post->ID)) . '" alt="' . $alt_text . '">'; ?>
 									</div>
 									</div>
-									<div class="bit-60">
+									<div class="bit-60" id="main-content">
 									<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 									<p class="byline entry-meta vcard">
                                                                         <?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',

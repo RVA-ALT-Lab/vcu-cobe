@@ -9,7 +9,7 @@
 
 <?php get_header(); ?>
 	
-	<div class="frame-full podcast-wrap">
+	<div class="frame-full podcast-wrap" id="main-content">
 	<!--<div class="full pc-header">
 		<div class="frame">
 				<div class="bit-1">

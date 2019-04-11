@@ -60,7 +60,7 @@
 	</div>
 	</div>
 
-	<div class="frame">
+	<div class="frame" id="main-content">
 	<div class="bit-1" id="central-nav">
 	<?php
 		$pages = array();

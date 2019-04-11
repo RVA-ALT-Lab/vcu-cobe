@@ -45,20 +45,7 @@
 	<?php $featuredBgId = get_post( get_post_thumbnail_id() ); ?>
 	<?php $alt_text = get_post_meta($featuredBgId->ID, '_wp_attachment_image_alt', true); ?>
 	<?php endwhile; endif; ?>
-	<div class="frame-full">
-	<div id="banner" class="bit-1">
-	<?php
-		if ( have_posts() ) : while ( have_posts() ) : the_post();
-			$banner_url = get_post_meta($post->ID, '_url', true);
-			echo '<a href="' . $banner_url . '">';
-			endwhile; else :
-				_e( 'No content here' );
-		endif;
-	?>
-	<img src="<?php echo $featuredBgImgUrl ?>" alt="<?php echo $alt_text ?>">
-	</a>
-	</div>
-	</div>
+	
 
 	<div class="frame" id="main-content">
 	<div class="bit-1" id="central-nav">

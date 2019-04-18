@@ -156,7 +156,7 @@
 		<div id="gcf-design">
 		</div>
 	</div>
-	<a class="social-sidebar podcast" href="http://cobe.vcu.edu/podcast/"><h3>Podcast</h3></a>
+	<a class="social-sidebar podcast" href="https://cobe.vcu.edu/resources/podcast/"><h3>Podcast</h3></a>
 	<?php
 		$args = array( 'post_type' => 'podcast', 'posts_per_page' => 1 );
 			$featured_episode_loop = new WP_query( $args );

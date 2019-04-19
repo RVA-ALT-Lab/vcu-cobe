@@ -118,3 +118,11 @@ jQuery(document).ready(function($) {
 
 
 }); /* end of as page load scripts */
+
+
+if (document.querySelectorAll('.tags a')){
+  let tags = document.querySelectorAll('.tags a')
+  tags.forEach(function(tag){
+    tag.innerHTML = '#' + tag.innerHTML
+  })
+}

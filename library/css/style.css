@@ -3000,6 +3000,15 @@ COBE STYLES
       color: #fff;
       font-size: 115%; }
 
+      .calendar-archives.classiclight .month, .calendar-archives.classiclight .day {
+        color: #424242;
+      }
+
+      .calendar-archives.classiclight .month.has-posts a, .calendar-archives.classiclight .day.has-posts a {
+        color: #0a5fa2;
+        text-decoration: underline;
+      }
+
 #central-nav {
   padding: 0; }
   #central-nav a {
@@ -3271,15 +3280,17 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #2196f3;
+  color: #0a5fa2;
   outline: none;
   text-decoration: none;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #0c7fda;
-    outline: none; }
+    color: #0a5fa2;
+    outline: none; 
+    text-decoration: underline;
+  }
   a:active, a:visited:active {
     outline: none; }
   a:link, a:visited:link {
@@ -3398,7 +3409,7 @@ and more scalable.
       */ }
       .nav li a:hover, .nav li a:focus {
         color: #fff;
-        background-color: #2196f3;
+        background-color: #0a5fa2;
         text-decoration: none;
         border-bottom: 2px solid #bbdefb; }
     .nav li ul.sub-menu li a,
@@ -3443,7 +3454,7 @@ POSTS & CONTENT STYLES
 /* style by tag (i.e. tag-news) */
 /* post meta */
 .byline {
-  color: #9fa6b4;
+  color: #222223;
   font-style: italic;
   margin: 0; }
 
@@ -3543,6 +3554,9 @@ POSTS & CONTENT STYLES
 .tags {
   margin: 0; }
 
+.tags a {
+  text-decoration: underline;
+}
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -4269,3 +4283,29 @@ be set to display none.
     max-width: 1200px; } }
 
 /*# sourceMappingURL=style.css.map */
+
+/*ACCESSIBILITY*/
+.visually-hidden { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+#sidebar1 {
+  font-weight: 600;
+}
+
+#archives_calendar-2 {
+  display: none;
+}
+
+.wp-caption-text .gallery-caption, .entry-content dd {
+  color: #272727;
+  font-weight: 500;
+}
+
+.nav li ul.sub-menu li a, .nav li ul.children li a {
+  width: 100%;
+}

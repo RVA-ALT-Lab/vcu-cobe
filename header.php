@@ -43,13 +43,13 @@
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 	<div id="skip-links">
 	    <a href="#menu-main-menu" tabindex="1">Skip to main navigation</a>
-	    <a href="#main-content" tabindex="2">Skip to main content</a>
+	    <a href="#main" tabindex="2">Skip to main content</a>
 	    <a href="#inner-footer" tabindex="3">Skip to footer</a>
 	</div>
 
 		<div id="container">
 
-			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader" aria-labelledby="logo">
 
 				<div id="inner-header" class="frame">
 					<div class="bit-1">
@@ -61,7 +61,7 @@
 					<?php // bloginfo('description'); ?>
 
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-labelledby="menu-main-menu">
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)

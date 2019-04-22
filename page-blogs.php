@@ -23,7 +23,7 @@
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
 
-								<section class="entry-content cf">
+								<section class="entry-content cf" aria-labelledby="post-<?php the_ID(); ?>">
 									<div class="bit-40">
 									<div class="blog-img-wrap">
 									<?php $imgId = get_post( get_post_thumbnail_id() ); ?>

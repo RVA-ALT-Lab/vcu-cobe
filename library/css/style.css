@@ -508,14 +508,14 @@ more here: http://www.newnet-soft.com/blog/csstypography
 */
 p {
   -ms-word-wrap: break-word;
-  word-break: break-word;
+  /*word-break: break-word;*/
   word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
   -webkit-hyphenate-before: 2;
   -webkit-hyphenate-after: 3;
-  hyphenate-lines: 3;
+  /*hyphenate-lines: 3;*/
   -webkit-font-feature-settings: "liga", "dlig";
   -moz-font-feature-settings: "liga=1, dlig=1";
   -ms-font-feature-settings: "liga", "dlig";
@@ -1634,7 +1634,7 @@ Stylesheet: Research Plugin
   margin-left: auto;
   margin-right: auto;
   margin-top: 2.5%;
-  padding-bottom: -5%;
+  /*padding-bottom: -5%;*/
   position: relative;
   background-color: rgba(255, 255, 255, 0.5); }
 
@@ -1928,7 +1928,7 @@ Stylesheet: Podcast Plugin
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #a2cbe1;
+  background-color: #000;
   z-index: 1000; }
   .pc-episode-footer h2 {
     margin-left: 2.5%; }
@@ -1988,8 +1988,8 @@ Stylesheet: Podcast Plugin
   padding-bottom: 5%; }
 
 .flip-container {
-  perspective: 1000;
-  -webkit-perspective: 1000; }
+  perspective: 1000px;
+  -webkit-perspective: 1000px; }
 
 .flip-container:hover .pc-musician-flipper {
   transform: rotateX(180deg);
@@ -2969,7 +2969,7 @@ COBE STYLES
       margin-left: 2.5em; }
   .social-sidebar.podcast {
     background-image: url(../icons/podcast-icon-w.png);
-    background-color: #a2cbe1;
+    background-color: #4099ff;
     clear: both; }
     .social-sidebar.podcast h3 {
       margin-left: 2.5em; }
@@ -4308,4 +4308,13 @@ be set to display none.
 
 .nav li ul.sub-menu li a, .nav li ul.children li a {
   width: 100%;
+}
+
+
+#calendar-widget a:hover,#calendar-widget a:focus,#calendar-widget a:visited:hover,#calendar-widget a:visited:focus {
+  color: #fff;
+}
+
+#calendar-widget a:hover, #calendar-widget a:focus, #calendar-widget a:visited:hover, #calendar-widget a:visited:focus {
+  color: #000;
 }

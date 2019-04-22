@@ -263,13 +263,13 @@
             ci.find('.gcf-item-end-date').html(etf);
             ci.find('.gcf-item-daterange').html(this.opts.daterange_formatter(sd, ed, st.indexOf(':') < 0));
           }
-          ci.find('.gcf-item-update-date').html(this.opts.date_formatter(this.parse_date(ent.updated), false));
+          //ci.find('.gcf-item-update-date').html(this.opts.date_formatter(this.parse_date(ent.updated), false));
           link = $('<a />').attr({
             target: this.opts.link_target,
             href: ent.htmlLink
           });
           if (this.opts.link_item_title) {
-            ci.find('.gcf-item-title').html(link.clone().text(ent.summary));
+            ci.find('.gcf-item-title').html(link.clone().text(ent.summary + ' ' + stf));
           } else {
             ci.find('.gcf-item-title').text(ent.summary);
           }

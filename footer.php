@@ -26,7 +26,7 @@
 					</p>
 					<ul class="vcuhp-footer-list list-unstyled vcuhp-footer-infolinks">
 						<li class="list-item"><a href="mailto:webmaster@vcu.edu" title="Contact the VCU webmaster">Webmaster</a></li>
-						<li class="list-item"><a href="/privacy-statement/" class="vcuhp-footer-link">Privacy statement</a></li>
+						<li class="list-item"><a href="https://www.vcu.edu/privacy-statement/" class="vcuhp-footer-link">Privacy statement</a></li>
 						<li class="list-item"><a href="https://accessibility.vcu.edu/" class="vcuhp-footer-link">Accessibility</a></li>
 					</ul>
 					</div>

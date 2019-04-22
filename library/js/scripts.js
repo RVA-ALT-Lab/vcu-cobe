@@ -126,3 +126,8 @@ if (document.querySelectorAll('.tags a')){
     tag.innerHTML = '#' + tag.innerHTML
   })
 }
+
+// if (document.getElementById('tag_cloud-2')){
+//   let tagTitle = document.getElementById('tag_cloud-2');
+//   tagTitle.innerHTML = '<div class="widgettitle">Tags</div>'
+// }

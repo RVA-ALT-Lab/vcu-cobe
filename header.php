@@ -41,7 +41,7 @@
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-	<div id="skip-links">
+	<div id="skip-links" role="keyboard-navigation">
 	    <a href="#menu-main-menu" tabindex="1">Skip to main navigation</a>
 	    <a href="#main" tabindex="2">Skip to main content</a>
 	    <a href="#inner-footer" tabindex="3">Skip to footer</a>

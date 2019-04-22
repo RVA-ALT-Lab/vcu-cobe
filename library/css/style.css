@@ -3409,7 +3409,7 @@ and more scalable.
       */ }
       .nav li a:hover, .nav li a:focus {
         color: #fff;
-        background-color: #0a5fa2;
+        background-color: #000;
         text-decoration: none;
         border-bottom: 2px solid #bbdefb; }
     .nav li ul.sub-menu li a,
@@ -4317,4 +4317,16 @@ be set to display none.
 
 #calendar-widget a:hover, #calendar-widget a:focus, #calendar-widget a:visited:hover, #calendar-widget a:visited:focus {
   color: #000;
+  background-color: #fff;
+}
+
+
+a:focus-visible, a:focus, #s input:focus-visible, #s input:focus, .bss-slides:focus,.bss-slides:focus-visible   {
+  outline: 2px solid #4099ff;
+  background: transparent;
+}
+
+
+input[type="text"]:focus, input[type="text"]:active, input[type="password"]:focus, input[type="password"]:active, input[type="datetime"]:focus, input[type="datetime"]:active, input[type="datetime-local"]:focus, input[type="datetime-local"]:active, input[type="date"]:focus, input[type="date"]:active, input[type="month"]:focus, input[type="month"]:active, input[type="time"]:focus, input[type="time"]:active, input[type="week"]:focus, input[type="week"]:active, input[type="number"]:focus, input[type="number"]:active, input[type="email"]:focus, input[type="email"]:active, input[type="url"]:focus, input[type="url"]:active, input[type="search"]:focus, input[type="search"]:active, input[type="tel"]:focus, input[type="tel"]:active, input[type="color"]:focus, input[type="color"]:active, select:focus, select:active, textarea:focus, textarea:active, .field:focus, .field:active {
+  outline: 2px solid #4099ff;
 }

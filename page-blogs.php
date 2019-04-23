@@ -21,7 +21,7 @@
 							$posts_loop = new WP_query( $args );
 							if ($posts_loop->have_posts()) : while ($posts_loop->have_posts()) : $posts_loop->the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> >
 
 								<section class="entry-content cf" aria-labelledby="post-<?php the_ID(); ?>">
 									<div class="bit-40">

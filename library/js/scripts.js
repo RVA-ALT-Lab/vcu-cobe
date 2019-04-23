@@ -119,7 +119,7 @@ jQuery(document).ready(function($) {
 
 }); /* end of as page load scripts */
 
-
+//add # to tags links to make unique for URL differntiation
 if (document.querySelectorAll('.tags a')){
   let tags = document.querySelectorAll('.tags a')
   tags.forEach(function(tag){
@@ -127,7 +127,19 @@ if (document.querySelectorAll('.tags a')){
   })
 }
 
-// if (document.getElementById('tag_cloud-2')){
-//   let tagTitle = document.getElementById('tag_cloud-2');
-//   tagTitle.innerHTML = '<div class="widgettitle">Tags</div>'
-// }
+//REPLACE H4 tags in sidebar with regular divs
+function replaceWidgetTitles(id,text){
+  if (document.getElementById(id)) {
+    let widget = document.getElementById(id);
+    let newTitle = document.createElement("div");
+    newTitle.innerHTML = text;
+    newTitle.classList.add("widgettitle");
+    widget.replaceChild(newTitle, widget.querySelector('h4'));
+  }
+}
+
+replaceWidgetTitles('tag_cloud-2','Tags')
+replaceWidgetTitles('recent-posts-2','Recent Posts')
+replaceWidgetTitles('wpp-2','Popular Posts')
+replaceWidgetTitles('archives_calendar-2','Archives')
+

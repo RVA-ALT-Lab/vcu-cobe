@@ -3058,7 +3058,7 @@ COBE STYLES
     max-width: 100%; }
   #home-news hr {
     margin-bottom: 1.5em; }
-  #home-news h6 {
+  #home-news .home-title` {
     font-weight: 600;
     font-size: 1em; }
   #home-news .bit-3 {
@@ -4329,4 +4329,15 @@ a:focus-visible, a:focus, #s input:focus-visible, #s input:focus, .bss-slides:fo
 
 input[type="text"]:focus, input[type="text"]:active, input[type="password"]:focus, input[type="password"]:active, input[type="datetime"]:focus, input[type="datetime"]:active, input[type="datetime-local"]:focus, input[type="datetime-local"]:active, input[type="date"]:focus, input[type="date"]:active, input[type="month"]:focus, input[type="month"]:active, input[type="time"]:focus, input[type="time"]:active, input[type="week"]:focus, input[type="week"]:active, input[type="number"]:focus, input[type="number"]:active, input[type="email"]:focus, input[type="email"]:active, input[type="url"]:focus, input[type="url"]:active, input[type="search"]:focus, input[type="search"]:active, input[type="tel"]:focus, input[type="tel"]:active, input[type="color"]:focus, input[type="color"]:active, select:focus, select:active, textarea:focus, textarea:active, .field:focus, .field:active {
   outline: 2px solid #4099ff;
+}
+
+.widgettitle {
+    font-family: "Cubano Regular", Helvetica, Arial, sans-serif;
+    text-rendering: optimizelegibility;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.excerpt-read-more {
+  text-decoration: underline;
 }

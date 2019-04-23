@@ -11,6 +11,7 @@
 		
 	<div id="widget-area">
 	<div id="header-widgets" class="frame-full">
+		<h1 class="visually-hidden">College Behavioral and Emotional Health Institute</h1>
 		<div class="frame">
 		<div id="top-story">
 		<h2>TOP STORY</h2>
@@ -47,7 +48,7 @@
 	<?php endwhile; endif; ?>
 	
 
-	<div class="frame" id="main-content">
+	<div class="frame" id="main">
 	<div class="bit-1" id="central-nav">
 	<?php
 		$pages = array();
@@ -133,7 +134,7 @@
 					echo '<div class="bit-3">';
 					echo '<a href="' . $url . '">';
 					echo '<img src="' . $thumbUrl . '" alt="' . $alt_text . '"/>';
-					echo '<h6>' . $title . '</h6>';
+					echo '<div class="home-title">' . $title . '</div>';
 					//echo '<p>' . $date . '</p>';
 					echo '</a></div>';
 				}
@@ -206,7 +207,7 @@
 					echo '<div class="bit-3">';
 					echo '<a href="' . $url . '">';
 					echo '<img src="' . $thumbUrl . '" alt="' . $alt_text . '"/>';
-					echo '<h6>' . $title . '</h6>';
+					echo '<div class="home-title">' . $title . '</div>';
 					//echo '<p>' . $date . '</p>';
 					echo '</a></div>';
 				}

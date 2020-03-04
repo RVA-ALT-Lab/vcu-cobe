@@ -16,7 +16,7 @@
 		<div id="top-story">
 		<h2>TOP STORY</h2>
 		<?php
-			$args = array( 'post_type' => 'post', 'posts_per_page' => 1, 'orderby' => 'date', 'order' => 'DSC' );
+			$args = array( 'post_type' => 'post', 'posts_per_page' => 1, 'orderby' => 'date', 'order' => 'DSC', 'category__not_in' => '158' );
 			$posts_loop = new WP_query( $args );
 			while ( $posts_loop->have_posts() ) : $posts_loop->the_post();
 				$title = get_the_title();

@@ -17,7 +17,7 @@
 
 							<?php
 							$blog_paged = get_query_var('paged') ? get_query_var('paged') : 1;
-							$args = array( 'post_type' => 'post', 'paged' => $blog_paged, 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DSC', 'ignore_sticky_posts' => 1 );
+							$args = array( 'post_type' => 'post', 'paged' => $blog_paged, 'posts_per_page' => 4, 'orderby' => 'date', 'order' => 'DSC', 'ignore_sticky_posts' => 1, 'category__not_in' => '158' );
 							$posts_loop = new WP_query( $args );
 							if ($posts_loop->have_posts()) : while ($posts_loop->have_posts()) : $posts_loop->the_post(); ?>
 
